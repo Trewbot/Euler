@@ -21,7 +21,7 @@ def findMultiple(thru):
 	for i in range(1, thru + 1):
 		if isPrime(i):
 			b *= i
-	a = b
+	a = thru*b
 	while 1:
 		if(multipleLoop(a, thru)):
 			return a

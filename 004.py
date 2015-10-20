@@ -5,8 +5,8 @@ def palindrome(num):
 	return str(num)==str(num)[::-1]
 
 def largestPalindrome(dig):
-	min = 10 ** dig
-	max = (10 ** (dig + 1)) - 1
+	min = 10 ** (dig - 1)
+	max = (10 ** (dig)) - 1
 	a = max
 	top = 0
 	while a >= min:

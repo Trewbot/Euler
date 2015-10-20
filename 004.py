@@ -25,5 +25,5 @@ dig = (len(sys.argv) > 1 and int(sys.argv[1])) or 3
 print()
 start = time.time()
 print(largestPalindrome(dig))
-print("%.2f seconds" % (time.time() - start))
+print("%.3f seconds" % (time.time() - start))
 print()

@@ -1,6 +1,5 @@
 import sys
 import time
-import math
 
 def multipleLoop(n, thru):
 	for i in range(1, thru + 1):
@@ -32,5 +31,5 @@ thru = (len(sys.argv) > 1 and int(sys.argv[1])) or 20
 print()
 start = time.time()
 print(findMultiple(thru))
-print("%.2f seconds" % (time.time() - start))
+print("%.3f seconds" % (time.time() - start))
 print()

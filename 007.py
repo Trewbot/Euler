@@ -1,26 +1,37 @@
 import sys
 import time
+import math
 
 def isPrime(n):
-	if(n <= 2):
+	if n == 1:
+		return 0
+	if n < 4:
 		return 1
-	for j in range(2, n - 1):
+	for j in range(3, math.ceil(math.sqrt(n)) + 1):
 		if n % j == 0:
 			return 0
 	return 1
 	
 def nthPrime(n):
-	pn = 0
-	i = 3
+	if n == 1:
+		return 2
+	if n == 2:
+		return 3
+	if n == 3:
+		return 5
+	pn = 2
+	i = 5
+	two = 1
 	while 1:
-		if i % 5 == 0 and i > 5:
-			i += 2
-			continue
 		if isPrime(i):
 			pn += 1
-		if pn == n - 1:
+		if pn == n:
 			return i
-		i += 2
+		if two:
+			i += 2
+		else:
+			i += 4
+		two = not two
 
 thru = (len(sys.argv) > 1 and int(sys.argv[1])) or 10001
 
